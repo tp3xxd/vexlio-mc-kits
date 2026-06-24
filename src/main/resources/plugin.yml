@@ -1,6 +1,6 @@
 name: VexlioKits
-author: Wazup92
-version: 9.9.3
+author: tp3x
+version: 6.9
 api-version: 1.13
 main: eu.milujukockoholky.vexliokits.VexlioKits
 softdepend: [Vault, PlaceholderAPI, TitleManager, AdvancedEnchantments, HolographicDisplays, DecentHolograms, ItemsAdder, ItemEdit]
