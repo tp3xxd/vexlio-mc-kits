@@ -1,0 +1,10 @@
+name: VexlioKits
+author: Wazup92
+version: 9.9.3
+api-version: 1.13
+main: eu.milujukockoholky.vexliokits.VexlioKits
+softdepend: [Vault, PlaceholderAPI, TitleManager, AdvancedEnchantments, HolographicDisplays, DecentHolograms, ItemsAdder, ItemEdit]
+commands:
+  vexliokits:
+    description: Main command!
+    aliases: [kits, vk]

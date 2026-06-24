@@ -1,0 +1,74 @@
+plugins {
+    id 'java'
+}
+
+group = 'eu.milujukockoholky'
+version = '9.9.3'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    
+    // Spigot Repo
+    maven {
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    
+    // JitPack for Vault, DecentHolograms, ItemsAdder, ItemEdit, TitleManager
+    maven {
+        url = 'https://jitpack.io'
+    }
+    
+    // CodeMC for HolographicDisplays, QualityArmory
+    maven {
+        url = 'https://repo.codemc.io/repository/maven-public/'
+    }
+    
+    // ExtendedClip for PlaceholderAPI
+    maven {
+        url = 'https://repo.extendedclip.com/content/repositories/placeholderapi/'
+    }
+}
+
+dependencies {
+    // Spigot API
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+    
+    // Vault
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7.1'
+    
+    // PlaceholderAPI
+    compileOnly 'me.clip:placeholderapi:2.11.5'
+    
+    // DecentHolograms
+    compileOnly 'com.github.decentsoftware-eu:decentholograms:2.8.6'
+    
+    // HolographicDisplays
+    compileOnly 'com.gmail.filoghost.holographicdisplays:holographicdisplays-api:2.4.9'
+    
+    // ItemsAdder
+    compileOnly 'com.github.LoneDev6:API-ItemsAdder:3.6.3-beta-14'
+    
+    // QualityArmory
+    compileOnly 'me.zombie_striker:QualityArmory:2.0.23'
+    
+    // TitleManager (via JitPack)
+    compileOnly 'com.github.Puharesource:TitleManager:2.3.6'
+    
+    // Annotations for XMaterial
+    compileOnly 'com.google.code.findbugs:jsr305:3.0.2'
+}
+
+jar {
+    // Exclude compile-time stubs from the final JAR
+    exclude 'net/advancedplugins/ae/api/**'
+    exclude 'emanondev/**'
+    
+    archiveFileName = 'VexlioKits.jar'
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}

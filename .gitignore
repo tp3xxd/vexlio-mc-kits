@@ -1,0 +1,21 @@
+# Gradle build and cache
+.gradle/
+build/
+.gradle-dist/
+
+# Java/Maven outputs (if any)
+target/
+
+# IDE configurations
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.settings/
+.vscode/
+
+# OS specific files
+Thumbs.db
+desktop.ini
