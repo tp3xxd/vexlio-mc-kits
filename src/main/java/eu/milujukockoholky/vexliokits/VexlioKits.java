@@ -121,8 +121,12 @@ public class VexlioKits extends JavaPlugin {
       loadConfig0();
       instance = this;
       MainCommand var1 = new MainCommand();
-      this.getCommand("VexlioKits").setExecutor(var1);
-      this.getCommand("VexlioKits").setTabCompleter(var1);
+      this.getCommand("vexliokits").setExecutor(var1);
+      this.getCommand("vexliokits").setTabCompleter(var1);
+      this.getCommand("kits").setExecutor(var1);
+      this.getCommand("kits").setTabCompleter(var1);
+      this.getCommand("spawn").setExecutor(var1);
+      this.getCommand("spawn").setTabCompleter(var1);
       this.config = new Config();
       this.msgs = new Messages();
       new AbilityManager();

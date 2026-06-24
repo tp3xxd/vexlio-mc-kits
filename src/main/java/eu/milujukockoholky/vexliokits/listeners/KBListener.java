@@ -43,6 +43,7 @@ import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.block.BlockBreakEvent;
@@ -1118,14 +1119,13 @@ public class KBListener implements Listener {
       }
    }
 
-   @EventHandler
+   @EventHandler(priority = EventPriority.HIGHEST)
    public void onPlayerChatEvent(AsyncPlayerChatEvent var1) {
       Player var2 = var1.getPlayer();
       if (this.plugin.players.contains(var2.getUniqueId()) && this.plugin.config.ShowRankInChat) {
          Rank var3 = PlayerDataManager.get(var2).getRank();
-         var1.setFormat(var3.getPrefix() + var1.getFormat());
+         var1.setFormat(var3.getPrefix() + ChatColor.RESET + var1.getFormat());
       }
-
    }
 
    @EventHandler

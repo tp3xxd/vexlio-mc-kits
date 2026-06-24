@@ -83,6 +83,21 @@ public class MainCommand implements CommandExecutor, TabCompleter {
 
    public boolean onCommand(CommandSender var1, Command var2, String var3, String[] var4) {
       VexlioKits var5 = VexlioKits.getInstance();
+      Messages var7 = Messages.getInstance();
+      if (var2.getName().equalsIgnoreCase("spawn")) {
+         SubCommand var14 = (SubCommand)this.commands.get("spawn");
+         if (!var14.allowConsole && !(var1 instanceof Player)) {
+            var1.sendMessage((String)var7.messages.get("No-Console"));
+            return true;
+         } else if (var14.permission != null && !var1.hasPermission(var14.permission)) {
+            var1.sendMessage((String)var7.messages.get("No-Permission"));
+            return false;
+         } else {
+            var14.execute(var5, var7, var1, var4);
+            return true;
+         }
+      }
+
       if (var4.length == 0) {
          var1.sendMessage(ChatColor.DARK_AQUA + "" + ChatColor.STRIKETHROUGH + " ----------" + ChatColor.AQUA + " VexlioKits " + ChatColor.DARK_AQUA + "" + ChatColor.STRIKETHROUGH + "----------");
          var1.sendMessage(ChatColor.DARK_AQUA + " - " + ChatColor.AQUA + "/" + var3 + ChatColor.DARK_AQUA + " - " + ChatColor.GRAY + "Main command");
@@ -107,7 +122,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
          return true;
       } else {
          String var6 = var4[0].toLowerCase();
-         Messages var7 = Messages.getInstance();
+         var7 = Messages.getInstance();
          if (!this.commands.containsKey(var6)) {
             boolean var8 = false;
 

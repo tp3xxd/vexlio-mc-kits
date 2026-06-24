@@ -830,20 +830,19 @@ public class PlayerData {
       this.plugin.cageInventory(var2, false);
       var2.setItem(var2.getSize() - 5, this.plugin.back_itemstack);
       double var3 = (new BigDecimal(this.deaths > 1 ? Double.valueOf((double)this.kills) / (double)this.deaths : (double)this.kills)).setScale(2, RoundingMode.HALF_UP).doubleValue();
-      ItemStackBuilder var5 = new ItemStackBuilder(Material.PAPER);
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("KILLS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.kills)).setType(Material.IRON_SWORD).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("DEATHS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.deaths)).setType(Material.REDSTONE).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("KDR") + ":").addLore(ChatColor.YELLOW + String.valueOf(var3)).setType(Material.ENCHANTED_BOOK).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("COINS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.getCoins(var1))).setType(Material.EMERALD).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("TOURNAMENT_WINS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.tournament_wins)).setType(Material.DIAMOND).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("CHALLENGE_WINS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.challenge_wins)).setType(Material.GOLD_INGOT).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("PROJECTILES_HIT") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.projectiles_hit)).setType(Material.BOW).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("EXP") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.dataexp)).setType(XMaterial.EXPERIENCE_BOTTLE.parseMaterial()).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("RANK") + ":").addLore(ChatColor.YELLOW + this.rank.getName()).setType(Material.CHEST).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("ABILITIES_USED") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.abilities_used)).setType(XMaterial.REDSTONE_TORCH.parseMaterial()).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("SOUPS_EATEN") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.soups_eaten)).setType(XMaterial.MUSHROOM_STEW.parseMaterial()).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("KILLSTREAKS_EARNED") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.killstreaks_earned)).setType(Material.DIAMOND_AXE).build()});
-      var2.addItem(new ItemStack[]{var5.setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("ELO") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.elo)).setType(Material.NETHER_STAR).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.IRON_SWORD)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("KILLS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.kills)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.REDSTONE)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("DEATHS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.deaths)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.ENCHANTED_BOOK)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("KDR") + ":").addLore(ChatColor.YELLOW + String.valueOf(var3)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.EMERALD)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("COINS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.getCoins(var1))).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.DIAMOND)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("TOURNAMENT_WINS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.tournament_wins)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.GOLD_INGOT)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("CHALLENGE_WINS") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.challenge_wins)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.BOW)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("PROJECTILES_HIT") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.projectiles_hit)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(XMaterial.EXPERIENCE_BOTTLE.parseMaterial())).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("EXP") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.dataexp)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.CHEST)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("RANK") + ":").addLore(ChatColor.YELLOW + this.rank.getName()).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(XMaterial.REDSTONE_TORCH.parseMaterial())).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("ABILITIES_USED") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.abilities_used)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(XMaterial.MUSHROOM_STEW.parseMaterial())).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("SOUPS_EATEN") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.soups_eaten)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.DIAMOND_AXE)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("KILLSTREAKS_EARNED") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.killstreaks_earned)).build()});
+      var2.addItem(new ItemStack[]{(new ItemStackBuilder(Material.NETHER_STAR)).setName(ChatColor.GREEN + (String)this.plugin.msgs.stats.get("ELO") + ":").addLore(ChatColor.YELLOW + String.valueOf(this.elo)).build()});
       return var2;
    }
 

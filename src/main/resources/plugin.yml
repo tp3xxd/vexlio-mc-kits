@@ -7,4 +7,9 @@ softdepend: [Vault, PlaceholderAPI, TitleManager, AdvancedEnchantments, Holograp
 commands:
   vexliokits:
     description: Main command!
-    aliases: [kits, vk]
+    aliases: [vk]
+  kits:
+    description: Kits main command!
+    aliases: [kitbattle, kb]
+  spawn:
+    description: Spawn command!
