@@ -1,0 +1,954 @@
+Kits:
+  Pvp:
+    Enabled: true
+    Require-Permission: false
+    Item: DIAMOND_SWORD
+    Price: 0
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bA very basic but strong kit!'
+  Archer:
+    Enabled: true
+    Require-Permission: false
+    Item: BOW
+    Price: 100
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1'
+      Chestplate: 'LEATHER_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BOW : 1 : enchant:ARROW_DAMAGE:1'
+    - 'ARROW : 64'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bStart with a sword and a strong bow'
+    - '&band a stack of arrows'
+  Ninja:
+    Enabled: true
+    Require-Permission: false
+    Item: NETHER_STAR
+    Price: 200
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:BLACK'
+      Chestplate: 'CHAINMAIL_CHESTPLATE : 1'
+      Leggings: 'CHAINMAIL_LEGGINGS : 1'
+      Boots: 'DIAMOND_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects:
+    - 'SPEED : 999999 : 2'
+    Executed-Commands: []
+    Description:
+    - '&bStart with a diamond sword'
+    - '&band week armor'
+    - '&bAnd infinite speed 2 potion'
+  Tank:
+    Enabled: true
+    Require-Permission: false
+    Item: DIAMOND_CHESTPLATE
+    Price: 400
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'DIAMOND_HELMET : 1'
+      Chestplate: 'DIAMOND_CHESTPLATE : 1'
+      Leggings: 'DIAMOND_LEGGINGS : 1'
+      Boots: 'DIAMOND_BOOTS : 1'
+    Items:
+    - 'IRON_SWORD : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects:
+    - 'SLOW : 999999 : 2'
+    Executed-Commands: []
+    Description:
+    - '&bStart with diamond armor'
+    - '&band an iron sword'
+    - '&bbut a slowness effect'
+  Pyro:
+    Enabled: true
+    Require-Permission: false
+    Item: FLINT_AND_STEEL
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : enchant:PROTECTION_FIRE:5'
+      Chestplate: 'IRON_CHESTPLATE : 1 : enchant:PROTECTION_FIRE:5'
+      Leggings: 'LEATHER_LEGGINGS : 1 : enchant:PROTECTION_FIRE:5'
+      Boots: 'IRON_BOOTS : 1 : enchant:PROTECTION_FIRE:5'
+    Items:
+    - 'IRON_SWORD : 1 : enchant:FIRE_ASPECT:1'
+    - 'BOW : 1 : enchant:ARROW_FIRE:1'
+    - 'ARROW : 64'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bStart with a fiery sword'
+    - '&band a fiery bow'
+    - '&band fire protection armor'
+  Assassin:
+    Enabled: true
+    Require-Permission: false
+    Item: GOLD_SWORD
+    Price: 600
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:RED'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'LEATHER_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'GOLD_SWORD:32 : 1 : enchant:DAMAGE_ALL:22'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet an&b extra almost insta kill sword'
+    - '&bthat only has 1 use per life'
+  Zombie:
+    Enabled: true
+    Require-Permission: false
+    Item: SKULL_ITEM:2
+    Price: 1000
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:GREEN'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'CHAINMAIL_LEGGINGS : 1'
+      Boots: 'LEATHER_BOOTS : 1 : dye:GREEN'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects:
+    - 'HEALTH_BOOST : 999999 : 5'
+    Executed-Commands: []
+    Description:
+    - '&bStart with extra bar of hearts'
+  Kangaroo:
+    Enabled: true
+    Require-Permission: false
+    Item: FIREWORK
+    Price: 800
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'LEATHER_CHESTPLATE : 1 : dye:YELLOW'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'DIAMOND_BOOTS : 1 : enchant:PROTECTION_FALL:5'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'FIREWORK : 1 : name:&cKangaroo rocket'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Kangaroo
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet a rocket that will launch you'
+    - '&bin the way you are looking!'
+    - '&bAnd its almost anti fall kit!'
+    - '&bTip: Shifting will boost you'
+    - '&bForward!'
+  Hades:
+    Enabled: true
+    Require-Permission: false
+    Item: BONE
+    Price: 1200
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'LEATHER_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BONE : 1 : name:&cSummoning bone'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Hades
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet a bone that will summon'
+    - '&bDogs that will fight for you!'
+  Switcher:
+    Enabled: true
+    Require-Permission: false
+    Item: SNOW_BALL
+    Price: 600
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:WHITE'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'SNOW_BALL : 16 : name:&cSwitch!'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Switcher
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bThrow a snowball at someone'
+    - '&bTo swap your locations!'
+  Thor:
+    Enabled: true
+    Require-Permission: false
+    Item: WOOD_AXE
+    Price: 900
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'WOOD_AXE : 1 : name:&cAlmighty axe!'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Thor
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet an axe that will'
+    - '&bStrike lightning on nearby enemies!'
+  Stomper:
+    Enabled: true
+    Require-Permission: false
+    Item: FEATHER
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'LEATHER_CHESTPLATE : 1 : dye:RED'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Stomper
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bJump on someone from a height'
+    - '&bTo deal some damage!'
+    - '&bThe higher you are the more'
+    - '&bDamage you will deal'
+    - '&bBut if the target is shifting'
+    - '&bYou wont deal as much damage!'
+    - '&bYou also have a MAX fall damage'
+    - '&bSo you wont die from falling'
+  Ghost:
+    Enabled: true
+    Require-Permission: false
+    Item: POTION:INVISIBILITY:false:false
+    Price: 400
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: ''
+      Chestplate: ''
+      Leggings: ''
+      Boots: ''
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:1'
+    - ''
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects:
+    - 'INVISIBILITY : 999999 : 1'
+    Executed-Commands: []
+    Description:
+    - '&bBe invisible with a potion effect'
+    - '&bUnfortunately, you wont have armor'
+    - '&bTo be fully invisible!'
+  Miner:
+    Enabled: true
+    Require-Permission: false
+    Item: LEATHER_HELMET
+    Price: 700
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:YELLOW'
+      Chestplate: 'LEATHER_CHESTPLATE : 1 : dye:YELLOW'
+      Leggings: 'LEATHER_LEGGINGS : 1 : dye:YELLOW'
+      Boots: 'LEATHER_BOOTS : 1 : dye:YELLOW'
+    Items:
+    - 'STONE_SWORD : 1 : enchant:DURABILITY:3'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects:
+    - 'INCREASE_DAMAGE : 999999 : 1'
+    - 'SPEED : 999999 : 1'
+    - 'NIGHT_VISION : 999999 : 1'
+    Executed-Commands: []
+    Description:
+    - '&bMining for hours has really taught'
+    - '&bYou to be strong and fast and can see'
+    - '&bIn darkness'
+    - '&bToo bad you actually never found any goods'
+  Spiderman:
+    Enabled: true
+    Require-Permission: false
+    Item: WEB
+    Price: 1000
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'LEATHER_CHESTPLATE : 1 : dye:BLUE'
+      Leggings: 'DIAMOND_LEGGINGS : 1'
+      Boots: 'DIAMOND_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'WEB : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Spiderman
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bThrow snowballs at your target'
+    - '&bTo put them in a web for'
+    - '&bFew seconds!'
+  Prisoner:
+    Enabled: true
+    Require-Permission: false
+    Item: LAVA_BUCKET
+    Price: 2000
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'DIAMOND_HELMET : 1'
+      Chestplate: 'LEATHER_CHESTPLATE : 1 : dye:RED'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'DISPENSER : 1 : name:&4Prison'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Prisoner
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bShoot a snowball and send'
+    - '&bThose murderers to the LAVA jail'
+  Climber:
+    Enabled: true
+    Require-Permission: false
+    Item: TRIPWIRE_HOOK
+    Price: 350
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:YELLOW'
+      Chestplate: 'CHAINMAIL_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BOW : 1 : enchant:ARROW_INFINITE:1'
+    - 'ARROW : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Climber
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bUse your bow to summon'
+    - '&bA magical chicken that will carry you'
+  Dragon:
+    Enabled: true
+    Require-Permission: false
+    Item: FIREBALL
+    Price: 1000
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:RED'
+      Chestplate: 'DIAMOND_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'LEATHER_BOOTS : 1 : dye:RED'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'FIREBALL : 1 : name:&cFlames'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Dragon
+    Potion-Effects:
+    - 'FIRE_RESISTANCE : 999999 : 1'
+    Executed-Commands: []
+    Description:
+    - '&bBreathe fire!'
+    - '&bAnd be immune for fire damage'
+  Suicidal:
+    Enabled: true
+    Require-Permission: false
+    Item: TNT
+    Price: 250
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:RED'
+      Chestplate: 'LEATHER_CHESTPLATE : 1 : dye:RED'
+      Leggings: 'LEATHER_LEGGINGS : 1 : dye:RED'
+      Boots: 'LEATHER_BOOTS : 1 : dye:RED'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'REDSTONE_TORCH_ON : 1 : name:&cSuicide!'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Suicidal
+    Potion-Effects:
+    - 'SPEED : 999999 : 1'
+    Executed-Commands: []
+    Description:
+    - '&bUse your torch to active'
+    - '&bThe tnt inside you and'
+    - '&bBlow up along nearby enemies'
+  Phantom:
+    Enabled: true
+    Require-Permission: false
+    Item: BOOK
+    Price: 800
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BOOK : 1 : name:&cFly!'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Phantom
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bUse your magical book to have the'
+    - '&bAbility of flying for few seconds'
+  Timelord:
+    Enabled: true
+    Require-Permission: false
+    Item: WATCH
+    Price: 900
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:BLACK'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'LEATHER_BOOTS : 1 : dye:BLACK'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'WATCH : 1 : name:&cFreeze!'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Timelord
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bUse your magical clock to'
+    - '&bPrevent players around you'
+    - '&bFrom moving'
+  Fisherman:
+    Enabled: true
+    Require-Permission: false
+    Item: FISHING_ROD
+    Price: 900
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'LEATHER_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:1'
+    - 'FISHING_ROD : 1 : enchant:DURABILITY:2'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Fisherman
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet a fishing rod that'
+    - '&bAllows you to teleport caught'
+    - '&bEntities to you'
+  Vanilla:
+    Enabled: true
+    Require-Permission: false
+    Item: SPLASH_POTION:INSTANT_HEAL:false:true
+    Price: 200
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:1'
+    - 'SPLASH_POTION:REGEN:false:false : 1'
+    - 'SPLASH_POTION:SPEED:true:false : 1'
+    - 'SPLASH_POTION:POISON:false:false : 1'
+    - 'SPLASH_POTION:SLOWNESS:false:false : 1'
+    - 'SPLASH_POTION:INSTANT_DAMAGE:false:false : 1'
+    - 'SPLASH_POTION:INSTANT_DAMAGE:false:false : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    - 'SPLASH_POTION:INSTANT_HEAL:false:true : 1'
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet some really good'
+    - '&bSplash potions! but instead of soup'
+    - '&bYou have instant heal 2 splash potions'
+  Burrower:
+    Enabled: true
+    Require-Permission: false
+    Item: BRICK
+    Price: 450
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BRICK : 1 : name:&cPanic room'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Burrower
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet a brick that will'
+    - '&bBuild a panic room for you'
+    - '&bYou will be safe in there'
+  Zen:
+    Enabled: true
+    Require-Permission: false
+    Item: SLIME_BALL
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'CHAINMAIL_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'SLIME_BALL : 1 : name:&cTeleporter'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Zen
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet a slime ball that will'
+    - '&bTeleport you to the nearest'
+    - '&bEnemy!'
+  Viking:
+    Enabled: true
+    Require-Permission: false
+    Item: DIAMOND_AXE
+    Price: 300
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_AXE : 1 : enchant:DAMAGE_ALL:1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bA basic kit with a diamond axe'
+    - '&bInstead of a diamond sword'
+  Viper:
+    Enabled: true
+    Require-Permission: false
+    Item: EYE_OF_ENDER
+    Price: 600
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:GREEN'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Viper
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bHave a chance of biting'
+    - '&bYour enemy while fighting'
+    - '&bWhich gives them a poison effect'
+  Monk:
+    Enabled: true
+    Require-Permission: false
+    Item: BLAZE_ROD
+    Price: 700
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:YELLOW'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BLAZE_ROD : 1 : name:&cRight click a player to use!'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Monk
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet a magical rod that will'
+    - '&bSwap the item in the target hand'
+    - '&bWith a random item in their hotbar!'
+  Dracula:
+    Enabled: true
+    Require-Permission: false
+    Item: REDSTONE
+    Price: 1300
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:RED'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'LEATHER_LEGGINGS : 1 : dye:RED'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:1 : name:&4Blood sucker'
+    - 'REDSTONE : 1 : name:&cRight click to activate'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Dracula
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet a sword that sucks the blood'
+    - '&bOf your enemies and have the ability'
+    - '&bTo suck enemies potion effects'
+    - '&bBut your blood can only handle'
+    - '&bThese effects for few seconds!'
+  Hulk:
+    Enabled: true
+    Require-Permission: false
+    Item: PISTON_STICKY_BASE
+    Price: 900
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:GREEN'
+      Chestplate: 'DIAMOND_CHESTPLATE : 1'
+      Leggings: 'CHAINMAIL_LEGGINGS : 1'
+      Boots: 'LEATHER_BOOTS : 1 : dye:GREEN'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'PISTON_STICKY_BASE : 1 : name:&cSmash!'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Hulk
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bSmash the ground and release your'
+    - '&bAnger! Causing blocks and players'
+    - '&bTo fly away'
+  Cactus:
+    Enabled: true
+    Require-Permission: false
+    Item: CACTUS
+    Price: 700
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1 : enchant:THORNS:2'
+      Chestplate: 'IRON_CHESTPLATE : 1 : enchant:THORNS:2'
+      Leggings: 'LEATHER_LEGGINGS : 1 : enchant:THORNS:2'
+      Boots: 'LEATHER_BOOTS : 1 : enchant:THORNS:2'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bGet thorns armor!'
+  Rider:
+    Enabled: true
+    Require-Permission: false
+    Item: DIAMOND_BARDING
+    Price: 400
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'DIAMOND_BARDING : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Rider
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bSummon a horse that you can ride!'
+  Summoner:
+    Enabled: true
+    Require-Permission: false
+    Item: IRON_BLOCK
+    Price: 600
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'CHAINMAIL_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'IRON_BLOCK : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Summoner
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bSummon an iron golem that will'
+    - '&bAttack any one attacks him'
+  Souper:
+    Enabled: true
+    Require-Permission: false
+    Item: CHEST
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'CHAINMAIL_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'CHEST : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Souper
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bAutomatically refill your hotbar with available soup!'
+  Bane:
+    Enabled: true
+    Require-Permission: false
+    Item: GOLD_HOE
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'GOLD_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'GOLD_HOE : 1 : name:&5Curse'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Bane
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bCurse someone to give them blindness,'
+    - '&bslowness, and weakness!'
+    - '&bbut you are unable to damage them'
+    - '&bmuch during this curse'
+  Sunder:
+    Enabled: true
+    Require-Permission: false
+    Item: BEACON
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'CHAINMAIL_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'CHAINMAIL_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BEACON : 1 : name:&4Swap'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Sunder
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bSwap your health with the targets health!'
+  Centaur:
+    Enabled: true
+    Require-Permission: false
+    Item: SULPHUR
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:RED'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'DIAMOND_LEGGINGS : 1'
+      Boots: 'CHAINMAIL_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'SULPHUR : 1 : name:&cStrike'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Centaur
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bDeal massive area damage that'
+    - '&beven damages you, if the targets'
+    - '&bsurvive though they get a regen effect'
+  Blinker:
+    Enabled: true
+    Require-Permission: false
+    Item: GHAST_TEAR
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:YELLOW : enchant:PROTECTION_EXPLOSIONS:1'
+      Chestplate: 'IRON_CHESTPLATE : 1 : enchant:PROTECTION_EXPLOSIONS:1'
+      Leggings: 'IRON_LEGGINGS : 1 : enchant:PROTECTION_EXPLOSIONS:1'
+      Boots: 'DIAMOND_BOOTS : 1 : enchant:PROTECTION_EXPLOSIONS:1'
+    Items:
+    - 'DIAMOND_SWORD : 1'
+    - 'BOW : 1 : enchant:ARROW_INFINITE:1 : name:&6Blink'
+    - 'ARROW : 1'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities:
+    - Blinker
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bTeleport to targets that have been'
+    - '&bhit with your arrows and release a tnt'
+    - '&bupon them! The arrows themselves deal'
+    - '&ba very low damage though!'
+  Builder:
+    Enabled: true
+    Require-Permission: false
+    Item: STONE
+    Price: 500
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'LEATHER_HELMET : 1 : dye:BLUE'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+      - 'DIAMOND_SWORD : 1'
+      - 'WOOL : 64'
+      - AUTO_FILL_HEAL_ITEM
+    Abilities:
+      - Builder
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+      - '&bGet the ability to place'
+      - '&btemporary blocks!'
+  Pvp+:
+    Enabled: true
+    Require-Permission: false
+    Item: DIAMOND_SWORD
+    Price: 750
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:2'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bA very basic but strong kit!'
+    - '&a+ Increased sword sharpness'
+    Upgraded-Version-Of: Pvp
+  Pvp++:
+    Enabled: true
+    Require-Permission: false
+    Item: DIAMOND_SWORD
+    Price: 1000
+    Selection-Cooldown: 0
+    Armor:
+      Helmet: 'IRON_HELMET : 1 : enchant:PROTECTION_ENVIRONMENTAL:2'
+      Chestplate: 'IRON_CHESTPLATE : 1'
+      Leggings: 'IRON_LEGGINGS : 1'
+      Boots: 'IRON_BOOTS : 1'
+    Items:
+    - 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:2'
+    - AUTO_FILL_HEAL_ITEM
+    Abilities: []
+    Potion-Effects: []
+    Executed-Commands: []
+    Description:
+    - '&bA very basic but strong kit!'
+    - '&a+ Increased sword sharpness'
+    - '&a+ Increased armor protection'
+    Upgraded-Version-Of: Pvp+

@@ -1,0 +1,27 @@
+# For a list of Materials you can use visit this website https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# For a list of enchantments you can use visit this website https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
+# For a list of potions you can use visit this website https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+# List of colors you can use as a dye: BLACK, AQUA, BLUE, FUCHSIA, GRAY, GREEN, LIME, MAROON, NAVY, OLIVE, ORANGE, PURPLE, RED, SILVER, TEAL, WHITE, YELLOW
+# Default kits are designed for the option 'Purchaseable-Kits-Are-Permanent' to be true, if you changed it to false you probably wanna change the prices
+# And make some over powered kits and what not, because they can be used once per purchase! 
+# To create new kits just copy other kits format and try understanding the format!
+# Setting 'Require-Permission' to true will make the kit require a permission!
+# Permission for any kit is kitbattle.kits.<Kit>
+# For POTIONS, if your server is below 1.9 then use  POTION:DURABILITY to make potions like POTION:16421, otherwise you should use the form
+# POTION/SPLASH_POTION/LINGERING_POTION:POTION_TYPE:EXTENDED:UPGRADED
+# TIPPED_ARROW also follows the same format! Example: 'TIPPED_ARROW:POISON:false:false : 1'
+# Example of the form -> 'SPLASH_POTION:INSTANT_DAMAGE:false:true : 1'
+# Adding - AUTO_FILL_HEAL_ITEM in the kit items will make the plugin fill the remaining slots with a healing item like MUSHROOM_SOUP
+# Executed-Commands placeholder is %player%
+# To make an item unbreakable, just add 'tag:unbreakable'
+# Example 1, for armor: 'IRON_BOOTS : 1 : tag:unbreakable'
+# Example 2, for items: 'DIAMOND_SWORD : 1 : enchant:DAMAGE_ALL:1 : tag:unbreakable'
+# You can now add custom model data for all items using the tag 'modeldata'. For example 'IRON_LEGGINGS : 1 : modeldata:5'
+# Selection-Cooldown is the time interval between conesecutive picks of this kit. If it is set to 60 seconds, that means that the player can only pick this kit once every 60 seconds
+# If you want to add QualityArmor guns / items, the format is: 'QualityArmory:<Item> : Amount'
+# For example, 'QualityArmory:awp : 1'
+# For crackshot, it is 'CrackShot:<Gun> : Amount'
+# For ItemsAdder, format is 'ItemsAdder:<your_item> : Amount'
+# For ItemEdit, format is 'ItemEdit:<ITEM_ID> : Amount
+
+Kits:

@@ -1,0 +1,5 @@
+# Ranks go in order, so the first rank would be the default rank!
+# The general ranks prefix will be used if the rank does not have a 'Prefix' setting
+# You must have a rank with 0 exp (Default rank), otherwise you will get errors
+
+General-Ranks-Prefix: '&6[&e%rank%&6] '

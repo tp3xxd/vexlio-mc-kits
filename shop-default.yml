@@ -1,0 +1,111 @@
+Pages:
+  '&cList #1':
+    Size: 54
+    Design:
+      1: 'GRAY_STAINED_GLASS_PANE : name: '
+      2: 'GRAY_STAINED_GLASS_PANE : name: '
+      3: 'GRAY_STAINED_GLASS_PANE : name: '
+      4: 'GRAY_STAINED_GLASS_PANE : name: '
+      5: 'GRAY_STAINED_GLASS_PANE : name: '
+      6: 'GRAY_STAINED_GLASS_PANE : name: '
+      7: 'GRAY_STAINED_GLASS_PANE : name: '
+      8: 'GRAY_STAINED_GLASS_PANE : name: '
+      9: 'GRAY_STAINED_GLASS_PANE : name: '
+      10: 'GRAY_STAINED_GLASS_PANE : name: '
+      18: 'GRAY_STAINED_GLASS_PANE : name: '
+      19: 'GRAY_STAINED_GLASS_PANE : name: '
+      27: 'GRAY_STAINED_GLASS_PANE : name: '
+      28: 'GRAY_STAINED_GLASS_PANE : name: '
+      36: 'GRAY_STAINED_GLASS_PANE : name: '
+      37: 'GRAY_STAINED_GLASS_PANE : name: '
+      45: 'GRAY_STAINED_GLASS_PANE : name: '
+      46: 'GRAY_STAINED_GLASS_PANE : name: '
+      47: 'GRAY_STAINED_GLASS_PANE : name: '
+      48: 'GRAY_STAINED_GLASS_PANE : name: '
+      49: 'GRAY_STAINED_GLASS_PANE : name: '
+      50: 'GRAY_STAINED_GLASS_PANE : name: '
+      51: 'GRAY_STAINED_GLASS_PANE : name: '
+      52: 'GRAY_STAINED_GLASS_PANE : name: '
+      53: 'GRAY_STAINED_GLASS_PANE : name: '
+      54: 'GRAY_STAINED_GLASS_PANE : name: '
+    Navigation:
+      NEXT_PAGE:
+        27: 'LIME_STAINED_GLASS_PANE : name:&aNext page'
+        36: 'LIME_STAINED_GLASS_PANE : name:&aNext page'
+      UPGRADES:
+        50: 'NETHER_STAR : name:&6Upgrades'
+    Items:
+      '11': Prisoner
+      '12': Burrower
+      '13': Dracula
+      '14': Kangaroo
+      '15': Switcher
+      '16': Dragon
+      '17': Spiderman
+      '20': Assassin
+      '21': Rider
+      '22': Miner
+      '23': Stomper
+      '24': Ghost
+      '25': Zombie
+      '26': Cactus
+      '29': Bane
+      '30': Builder
+      '31': Summoner
+      '32': Tank
+      '33': Hades
+      '34': Vanilla
+      '35': Viking
+      '38': Blinker
+      '39': Thor
+      '40': Zen
+      '41': Sunder
+      '42': Climber
+      '43': Monk
+      '44': Centaur
+  '&cList #2':
+    Size: 54
+    Design:
+      1: 'GRAY_STAINED_GLASS_PANE : name: '
+      2: 'GRAY_STAINED_GLASS_PANE : name: '
+      3: 'GRAY_STAINED_GLASS_PANE : name: '
+      4: 'GRAY_STAINED_GLASS_PANE : name: '
+      5: 'GRAY_STAINED_GLASS_PANE : name: '
+      6: 'GRAY_STAINED_GLASS_PANE : name: '
+      7: 'GRAY_STAINED_GLASS_PANE : name: '
+      8: 'GRAY_STAINED_GLASS_PANE : name: '
+      9: 'GRAY_STAINED_GLASS_PANE : name: '
+      10: 'GRAY_STAINED_GLASS_PANE : name: '
+      18: 'GRAY_STAINED_GLASS_PANE : name: '
+      19: 'GRAY_STAINED_GLASS_PANE : name: '
+      27: 'GRAY_STAINED_GLASS_PANE : name: '
+      28: 'GRAY_STAINED_GLASS_PANE : name: '
+      36: 'GRAY_STAINED_GLASS_PANE : name: '
+      37: 'GRAY_STAINED_GLASS_PANE : name: '
+      45: 'GRAY_STAINED_GLASS_PANE : name: '
+      46: 'GRAY_STAINED_GLASS_PANE : name: '
+      47: 'GRAY_STAINED_GLASS_PANE : name: '
+      48: 'GRAY_STAINED_GLASS_PANE : name: '
+      49: 'GRAY_STAINED_GLASS_PANE : name: '
+      50: 'GRAY_STAINED_GLASS_PANE : name: '
+      51: 'GRAY_STAINED_GLASS_PANE : name: '
+      52: 'GRAY_STAINED_GLASS_PANE : name: '
+      53: 'GRAY_STAINED_GLASS_PANE : name: '
+      54: 'GRAY_STAINED_GLASS_PANE : name: '
+    Navigation:
+      PREVIOUS_PAGE:
+        19: 'RED_STAINED_GLASS_PANE : name:&cPrevious page'
+        28: 'RED_STAINED_GLASS_PANE : name:&cPrevious page'
+      UPGRADES:
+        50: 'NETHER_STAR : name:&6Upgrades'
+    Items:
+      '11': Phantom
+      '12': Pyro
+      '13': Suicidal
+      '14': Souper
+      '15': Ninja
+      '16': Archer
+      '17': Timelord
+      '20': Viper
+      '21': Fisherman
+      '22': Hulk

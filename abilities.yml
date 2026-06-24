@@ -1,0 +1,106 @@
+# Please do not delete any ability! only modify the available options for it
+
+Abilities:
+  Kangaroo:
+    Cooldown: 5
+    Activation-Material: FIREWORK_ROCKET
+  Fisherman:
+    Cooldown: 5
+  Dracula:
+    Cooldown: 45
+    Lasts-For: 15
+    Activation-Material: REDSTONE
+  Hades:
+    Cooldown: 45
+    Amount-Of-Dogs: 3
+    Dogs-Last-For: 10
+    Activation-Material: BONE
+  Thor:
+    Cooldown: 10
+    Lightning-Damage: 4
+    Strike-Radius: 5
+    Activation-Material: WOODEN_AXE
+  Stomper:
+    Stomp-Radius: 5
+    Max-Fall-Damage: 2
+    Max-Damage-Dealt-When-Stomped-While-Shifting: 2
+  Spiderman:
+    Cooldown: 30
+    Webs-Last-For: 10
+    Activation-Material: COBWEB
+  Prisoner:
+    Cooldown: 60
+    Prison-Lasts-For: 6
+    Activation-Material: DISPENSER
+  Climber:
+    Cooldown: 30
+    Time-Until-Chicken-Disappear: 5
+  Dragon:
+    Cooldown: 30
+    Amount-Of-Bursts: 3
+    Damage-Dealt: 4
+    Fire-Lasts-For: 5
+    Fire-Range: 10
+    Activation-Material: FIRE_CHARGE
+  Phantom:
+    Cooldown: 45
+    Flight-Lasts-For: 5
+    Activation-Material: BOOK
+  Timelord:
+    Cooldown: 45
+    Freeze-Radius: 7
+    Freeze-Time: 10
+    Freeze-By-Teleportation: true
+    Activation-Material: CLOCK
+  Burrower:
+    Cooldown: 60
+    Room-Lasts-For: 8
+    Activation-Material: BRICK
+  Zen:
+    Cooldown: 60
+    Max-Range: 60
+    Activation-Material: SLIME_BALL
+  Viper:
+    Poison-Chance: 5%
+    Poison-Lasts-For: 10
+    Poison-Level: 1
+  Monk:
+    Cooldown: 45
+    Activation-Material: BLAZE_ROD
+  Hulk:
+    Cooldown: 30
+    Damage-Dealt: 5
+    Damage-Radius: 10
+    Activation-Material: STICKY_PISTON
+  Rider:
+    Cooldown: 45
+    Horse-Lasts-For: 10
+    Activation-Material: DIAMOND_HORSE_ARMOR
+  Summoner:
+    Cooldown: 70
+    Golem-Lasts-For: 20
+    Activation-Material: IRON_BLOCK
+  Suicidal:
+    Cooldown: 30
+    Activation-Material: REDSTONE_TORCH
+  Souper:
+    Cooldown: 15
+    Activation-Material: CHEST
+  Bane:
+    Cooldown: 45
+    Duration: 8
+    Activation-Material: GOLDEN_HOE
+  Sunder:
+    Cooldown: 30
+    Activation-Material: BEACON
+  Centaur:
+    Cooldown: 30
+    Damage-Radius: 4
+    Damage: 18
+    Regen-Level: 2
+    Regen-Duration: 5
+    Activation-Material: GUNPOWDER
+  Blinker:
+    Cooldown: 25
+  Builder:
+    Blocks-Last-For: 3
