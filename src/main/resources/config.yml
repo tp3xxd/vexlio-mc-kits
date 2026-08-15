@@ -78,6 +78,21 @@ mysql-database: database
 mysql-username: root
 mysql-password: root
 
+# ── Fáze 7: Game API + Stats propojení (minihra → Game API / stats) ──
+server-name: kits-1
+
+game-api:
+  enabled: false
+  url: http://localhost:3060
+  secret: CHANGE_ME
+  game-id: kits
+  mode-id: solo
+
+stats:
+  enabled: false
+  url: http://localhost:3040
+  secret: CHANGE_ME
+
 Bungee-Mode: false
 Shuffle-Every-In-Minutes: 30
 Time-Shown-Before-Shuffle: [60, 30, 15, 10, 5, 4, 3, 2, 1]

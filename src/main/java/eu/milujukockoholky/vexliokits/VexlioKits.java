@@ -97,9 +97,10 @@ public class VexlioKits extends JavaPlugin {
    public CustomizableScrollableInventory shop;
    public Inventory profileInventory;
    public Inventory trailsInventory;
-   public BungeeMode bungeeMode;
-   public AchievementsManager achievementsManager;
-   public MySQL mysql;
+public BungeeMode bungeeMode;
+    public AchievementsManager achievementsManager;
+    public MySQL mysql;
+    public eu.milujukockoholky.vexliokits.minigame.MinigameProvider minigameProvider;
    public GeneralizedHologramsManager hologramsManager;
    CustomMapsManager customMapsManager;
    BukkitTask scoreboardTitleAnimationTask;
@@ -127,8 +128,10 @@ public class VexlioKits extends JavaPlugin {
       this.getCommand("kits").setTabCompleter(var1);
       this.getCommand("spawn").setExecutor(var1);
       this.getCommand("spawn").setTabCompleter(var1);
-      this.config = new Config();
-      this.msgs = new Messages();
+this.config = new Config();
+       this.msgs = new Messages();
+       this.minigameProvider = new eu.milujukockoholky.vexliokits.minigame.MinigameProvider(this);
+       this.minigameProvider.loadConfig();
       new AbilityManager();
       if (this.getConfig().getBoolean("Check-For-General-Notifications")) {
          new NotificationsManager();
@@ -530,6 +533,7 @@ public class VexlioKits extends JavaPlugin {
    public void join(final Player var1, PlayingMap var2, int var3) {
       final PlayerData var4 = PlayerDataManager.get(var1);
       this.players.add(var1.getUniqueId());
+      this.minigameProvider.sendPlayerJoined(var1.getUniqueId());
       if (this.config.AllowBuilding && !this.editmode.contains(var1.getUniqueId())) {
          this.editmode.add(var1.getUniqueId());
       }
@@ -614,6 +618,7 @@ public class VexlioKits extends JavaPlugin {
 
       this.players.remove(var1.getUniqueId());
       this.spectating.remove(var1.getUniqueId());
+      this.minigameProvider.sendPlayerLeft(var1.getUniqueId());
       PlayerData var4 = PlayerDataManager.get(var1);
       var4.killstreak = 0;
       var4.deathstreak = 0;

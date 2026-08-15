@@ -252,9 +252,11 @@ public class KBListener implements Listener {
             var1.getDrops().clear();
          }
 
-         var1.setDeathMessage((String)null);
-         final PlayerData var3 = PlayerDataManager.get(var2);
-         var3.addDeaths();
+var1.setDeathMessage((String)null);
+          final PlayerData var3 = PlayerDataManager.get(var2);
+          var3.addDeaths();
+          this.plugin.minigameProvider.recordMetric(var2.getUniqueId(), var2.getName(), "deaths", 1);
+          this.plugin.minigameProvider.sendPlayerLost(var2.getUniqueId());
          var3.setKit(var2, (Kit)null);
          var3.killstreak = 0;
          ++var3.deathstreak;
@@ -386,6 +388,8 @@ public class KBListener implements Listener {
    private void awardKiller(Player var1, Player var2, PlayerData var3) {
       PlayerData var4 = PlayerDataManager.get(var1);
       var4.addKills(var1);
+      this.plugin.minigameProvider.sendPlayerKilled(var2.getUniqueId(), var1.getUniqueId());
+      this.plugin.minigameProvider.recordMetric(var1.getUniqueId(), var1.getName(), "kills", 1);
       ++var4.killstreak;
       if (var4.deathstreak >= this.plugin.config.leastDeathstreak) {
          for(String var6 : this.plugin.config.DeathstreakEndCommands) {
