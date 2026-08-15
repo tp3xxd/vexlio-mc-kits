@@ -101,6 +101,7 @@ public BungeeMode bungeeMode;
     public AchievementsManager achievementsManager;
     public MySQL mysql;
     public eu.milujukockoholky.vexliokits.minigame.MinigameProvider minigameProvider;
+    public eu.milujukockoholky.vexliokits.sync.SyncSender syncSender;
    public GeneralizedHologramsManager hologramsManager;
    CustomMapsManager customMapsManager;
    BukkitTask scoreboardTitleAnimationTask;
@@ -130,8 +131,10 @@ public BungeeMode bungeeMode;
       this.getCommand("spawn").setTabCompleter(var1);
 this.config = new Config();
        this.msgs = new Messages();
-       this.minigameProvider = new eu.milujukockoholky.vexliokits.minigame.MinigameProvider(this);
-       this.minigameProvider.loadConfig();
+this.minigameProvider = new eu.milujukockoholky.vexliokits.minigame.MinigameProvider(this);
+      this.minigameProvider.loadConfig();
+      this.syncSender = new eu.milujukockoholky.vexliokits.sync.SyncSender(this);
+      this.syncSender.start();
       new AbilityManager();
       if (this.getConfig().getBoolean("Check-For-General-Notifications")) {
          new NotificationsManager();
@@ -234,23 +237,9 @@ this.config = new Config();
          }
       }
 
-      if (this.mysql != null) {
-         try {
-            this.mysql.getConnection().close();
-            this.mysql = null;
-         } catch (SQLException var9) {
-            var9.printStackTrace();
-         }
-      }
-
-      if (this.config.useMySQL) {
-         try {
-            this.mysql = new MySQL(this.config.tableprefix, this.config.mysqlhost, this.config.mysqlport, this.config.mysqldatabase, this.config.mysqlusername, this.config.mysqlpassword);
-            this.mysql.setupTable();
-         } catch (SQLException var8) {
-            var8.printStackTrace();
-         }
-      }
+      // Revize architektury: žádná vlastní DB — data v paměti/souborech,
+      // každou minutu sync do proxy pluginu (plugin messaging).
+      this.mysql = null;
 
       this.profileInventory = Bukkit.createInventory((InventoryHolder)null, 9, (String)this.msgs.inventories.get("Profile-Inventory"));
       this.cageInventory(this.profileInventory, true);

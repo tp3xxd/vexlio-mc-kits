@@ -351,7 +351,9 @@ public class Config {
 
       this.SendKillstreaksToEveryone = var1.getBoolean("Send-Killstreaks-To-Everyone");
       this.UpdateTopSignsEveryInMinutes = var1.getInt("Update-Top-Signs-Every-In-Minutes");
-      this.useMySQL = var1.getBoolean("use-mysql");
+      // Revize architektury: žádná vlastní DB v pluginu — data v paměti/souborech,
+      // každou minutu sync do proxy (plugin messaging). MySQL je trvale vypnuté.
+      this.useMySQL = false;
       this.tableprefix = var1.getString("table-prefix");
       this.mysqlhost = var1.getString("mysql-host");
       this.mysqlport = var1.getString("mysql-port");
