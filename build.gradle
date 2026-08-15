@@ -5,8 +5,10 @@ plugins {
 group = 'eu.milujukockoholky'
 version = '9.9.3'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+java {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
+}
 
 repositories {
     mavenCentral()
