@@ -390,6 +390,7 @@ var1.setDeathMessage((String)null);
       var4.addKills(var1);
       this.plugin.minigameProvider.sendPlayerKilled(var2.getUniqueId(), var1.getUniqueId());
       this.plugin.minigameProvider.recordMetric(var1.getUniqueId(), var1.getName(), "kills", 1);
+      this.plugin.minigameProvider.claimReward(var1.getUniqueId(), var1.getName(), "kill_reward", (long)this.plugin.config.EarnedCoinsPerKill * 100L);
       ++var4.killstreak;
       if (var4.deathstreak >= this.plugin.config.leastDeathstreak) {
          for(String var6 : this.plugin.config.DeathstreakEndCommands) {

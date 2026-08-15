@@ -35,6 +35,9 @@ public class MinigameProvider {
     public String statsSecret;
     public String serverName = "kits-1";
 
+    // Idempotency pro odměny (spec §20): klíč = matchId + playerUuid + rewardType.
+    private final java.util.Set<String> processedRewards = ConcurrentHashMap.newKeySet();
+
     public MinigameProvider(VexlioKits plugin) {
         this.plugin = plugin;
     }
@@ -49,6 +52,9 @@ public class MinigameProvider {
         this.statsUrl = plugin.getConfig().getString("stats.url", "http://localhost:3040");
         this.statsSecret = plugin.getConfig().getString("stats.secret", "CHANGE_ME");
         this.serverName = plugin.getConfig().getString("server.name", "kits-1");
+        this.economyEnabled = plugin.getConfig().getBoolean("economy.enabled", false);
+        this.economyUrl = plugin.getConfig().getString("economy.url", "https://api.kubiceek.eu");
+        this.economySecret = plugin.getConfig().getString("api.key", "CHANGE_ME");
     }
 
     // ─────────────────────────── Lifecycle eventy → Game API ───────────────────────────
@@ -177,5 +183,63 @@ public class MinigameProvider {
 
     private String getOrCreateMatchId(UUID playerUuid) {
         return matchIds.computeIfAbsent(playerUuid, k -> UUID.randomUUID().toString());
+    }
+
+    // ─────────────────────────── Odměny (spec §20) ───────────────────────────
+
+    public boolean economyEnabled;
+    public String economyUrl;
+    public String economySecret;
+
+    /**
+     * Zapíše odměnu do economy přes core s idempotency klíčem
+     * `matchId + playerUuid + rewardType`. Retry/duplicita se neprojeví podruhé.
+     * @return true pokud odměna byla skutečně zapsána (poprvé), false při duplikátu/chybě.
+     */
+    public boolean claimReward(UUID playerUuid, String playerName, String rewardType, long amountMinor) {
+        if (!economyEnabled || amountMinor <= 0) return false;
+        String matchId = getOrCreateMatchId(playerUuid);
+        String idempotencyKey = matchId + ":" + playerUuid + ":" + rewardType;
+
+        if (!processedRewards.add(idempotencyKey)) {
+            return false; // už zpracováno — idempotence
+        }
+
+        final String json = "{\"uuid\":\"" + playerUuid + "\",\"currency\":\"coins\",\"amount\":" + (amountMinor / 100.0) + ",\"idempotencyKey\":\"" + idempotencyKey + "\"}";
+        final java.util.concurrent.atomic.AtomicBoolean success = new java.util.concurrent.atomic.AtomicBoolean(false);
+        try {
+            java.util.concurrent.CountDownLatch latch = new java.util.concurrent.CountDownLatch(1);
+            Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
+                try {
+                    HttpURLConnection conn = (HttpURLConnection) new URL(economyUrl + "/v1/economy/modify").openConnection();
+                    conn.setRequestMethod("POST");
+                    conn.setRequestProperty("Content-Type", "application/json");
+                    conn.setRequestProperty("Authorization", "Bearer " + economySecret);
+                    conn.setDoOutput(true);
+                    conn.setConnectTimeout(3000);
+                    conn.setReadTimeout(3000);
+                    try (OutputStream os = conn.getOutputStream()) {
+                        os.write(json.getBytes(StandardCharsets.UTF_8));
+                    }
+                    int code = conn.getResponseCode();
+                    if (code == 200) {
+                        String body = new String(conn.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+                        if (body.contains("\"success\":true")) success.set(true);
+                    }
+                    conn.disconnect();
+                } catch (Exception e) {
+                    plugin.getLogger().warning("Reward " + rewardType + " for " + playerUuid + " failed: " + e.getMessage());
+                } finally {
+                    latch.countDown();
+                }
+            });
+            latch.await(5, java.util.concurrent.TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+        if (success.get()) {
+            plugin.getLogger().info("Reward " + rewardType + " (" + amountMinor + " minor) claimed for " + playerUuid + " (key=" + idempotencyKey + ")");
+        }
+        return success.get();
     }
 }
