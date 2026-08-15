@@ -149,17 +149,22 @@ public class MinigameProvider {
         return sb.toString();
     }
 
-    // ─────────────────────────── Statistiky → Stats plugin ───────────────────────────
+    // ─────────────────────────── Statistiky → Game API (MAIN) ───────────────────────────
 
+    /**
+     * Statistiky se posílají do Game API (main), ne do stats pluginu (revize).
+     * Game API je doplní o identitu serveru z proxy (jméno serveru + minihra)
+     * a předá je sync do proxy → core.
+     */
     public void recordMetric(UUID playerUuid, String playerName, String metric, int amount) {
-        if (!statsEnabled || amount <= 0) return;
-        final String json = "{\"uuid\":\"" + playerUuid + "\",\"minigame\":\"" + gameId + "\",\"name\":\"" + safe(playerName) + "\",\"" + metric + "\":" + amount + "}";
+        if (!gameApiEnabled || amount <= 0) return;
+        final String json = "{\"uuid\":\"" + playerUuid + "\",\"name\":\"" + safe(playerName) + "\",\"metric\":\"" + metric + "\",\"amount\":" + amount + "}";
         Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
             try {
-                HttpURLConnection conn = (HttpURLConnection) new URL(statsUrl + "/api/stats/minigame").openConnection();
+                HttpURLConnection conn = (HttpURLConnection) new URL(gameApiUrl + "/api/game/stats").openConnection();
                 conn.setRequestMethod("POST");
                 conn.setRequestProperty("Content-Type", "application/json");
-                conn.setRequestProperty("Authorization", "Bearer " + statsSecret);
+                conn.setRequestProperty("Authorization", "Bearer " + gameApiSecret);
                 conn.setDoOutput(true);
                 conn.setConnectTimeout(3000);
                 conn.setReadTimeout(3000);
@@ -168,7 +173,7 @@ public class MinigameProvider {
                 }
                 int code = conn.getResponseCode();
                 if (code != 200) {
-                    plugin.getLogger().warning("Stats push (" + metric + ") returned HTTP " + code);
+                    plugin.getLogger().warning("Game API stats push (" + metric + ") returned HTTP " + code);
                 }
                 conn.disconnect();
             } catch (Exception e) {

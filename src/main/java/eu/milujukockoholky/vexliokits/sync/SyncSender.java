@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
  */
 public class SyncSender {
 
-    private static final String CHANNEL = "vexlio:sync:v1";
+    private static final String CHANNEL = "vexlio:sync";
 
     private final VexlioKits plugin;
     private final ConcurrentLinkedQueue<String> pendingBatches = new ConcurrentLinkedQueue<>();
